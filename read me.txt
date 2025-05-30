@@ -1,0 +1,42 @@
+# WebBookProject
+
+This is a Java-based web application using Servlets to perform basic CRUD operations (Create, Read, Update, Delete) on a MySQL database of books.
+
+## Project Structure
+
+- `src/main/java/com/servlet/`
+  - `RegisterServlet.java` – Inserts a new book record.
+  - `BookListServlet.java` – Displays list of all books.
+  - `EditServlet.java` – Fetches data for editing.
+  - `EditFinalServlet.java` – Updates the edited data.
+  - `DeleteServlet.java` – Deletes a selected book.
+
+- `src/main/webapp/`
+  - `home.html` – Home page with links to features.
+  - `css/` – Folder for custom styles (optional).
+  - `WEB-INF/web.xml` – Deployment descriptor.
+
+## Database Configuration
+
+Database: `books`  
+Table: `BOOK`
+
+```sql
+CREATE TABLE BOOK (
+  BOOKID INT PRIMARY KEY AUTO_INCREMENT,
+  BOOKNAME VARCHAR(50),
+  BOOKEDITION VARCHAR(30),
+  BOOKPRICE FLOAT
+);
+
+
+How to Run
+Use Eclipse IDE or any Java EE compatible IDE.
+
+Add Apache Tomcat 9 or higher to your server runtime.
+
+Add the MySQL JDBC Driver (mysql-connector-java-x.x.x.jar) to your build path or /WEB-INF/lib.
+
+Update MySQL credentials in RegisterServlet.java and other servlet files if needed.
+
+Run the project on the server and open home.html in the browser.
